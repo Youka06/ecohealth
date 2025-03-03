@@ -1,0 +1,130 @@
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 5px;
+
+  img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.logo-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  
+  .leaf {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg);
+    left: 8px;
+    top: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .cross {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    transform: rotate(45deg);
+    left: 10px;
+    top: 10px;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 4px;
+      background: #2c5282;
+      top: 8px;
+      left: 0;
+      border-radius: 2px;
+    }
+    
+    &:before {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 4px;
+      background: #2c5282;
+      left: 8px;
+      top: 0;
+      border-radius: 2px;
+    }
+  }
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  
+  .eco {
+    color: #4CAF50;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  }
+  
+  .health {
+    color: #2c5282;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 80px;
+  }
+  
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    
+    .leaf {
+      width: 20px;
+      height: 20px;
+      left: 6px;
+      top: 6px;
+    }
+    
+    .cross {
+      width: 16px;
+      height: 16px;
+      left: 8px;
+      top: 8px;
+      
+      &:after {
+        width: 16px;
+        height: 3px;
+        top: 6.5px;
+      }
+      
+      &:before {
+        height: 16px;
+        width: 3px;
+        left: 6.5px;
+      }
+    }
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+  }
+}
